@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btoPantallaBuscarProducto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="DuplicateIds">
+
+    <TextView
+        android:id="@+id/Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="42dp"
+        android:text="Selecciona una accion"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btoCompra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btoCompra"
+        android:layout_width="146dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="compra"
+        android:text="Compra"
+        app:layout_constraintBottom_toTopOf="@+id/btoVenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Menu" />
+
+    <Button
+        android:id="@+id/btoVenta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:onClick="venta"
+        android:text="Venta"
+        app:layout_constraintBottom_toTopOf="@+id/btoClientes"
+        app:layout_constraintEnd_toEndOf="@+id/btoCompra"
+        app:layout_constraintStart_toStartOf="@+id/btoClientes"
+        app:layout_constraintTop_toBottomOf="@+id/btoCompra" />
+
+    <Button
+        android:id="@+id/btoPantallaBuscarCompra"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="545dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="PantallaBuscarCompra"
+        android:text="Buscar compra"
+        app:layout_constraintBottom_toTopOf="@+id/btoPantallaBuscarProducto"
+        app:layout_constraintEnd_toStartOf="@+id/btoPantallaBuscarVenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btoPantallaBuscarVenta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="PantallaBuscarVenta"
+        android:text="Buscar Venta"
+        app:layout_constraintBottom_toTopOf="@+id/btoPantallaMostrarProveedores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btoPantallaBuscarCompra"
+        app:layout_constraintTop_toBottomOf="@+id/btoeliminarCliente" />
+
+    <Button
+        android:id="@+id/btoPantallaBuscarProducto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="33dp"
+        android:onClick="PantallaBuscarProducto"
+        android:text="Buscar Producto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btoPantallaMostrarProveedores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btoPantallaBuscarCompra" />
+
+    <Button
+        android:id="@+id/btoPantallaMostrarProveedores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="PantallaMostrarProveedores"
+        android:text="Proveedores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btoPantallaBuscarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/btoPantallaBuscarVenta" />
+
+    <Button
+        android:id="@+id/btoClientes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="Clientes"
+        android:text="Clientes"
+        app:layout_constraintBottom_toTopOf="@+id/btoeliminarCliente"
+        app:layout_constraintEnd_toEndOf="@+id/btoeliminarCliente"
+        app:layout_constraintStart_toStartOf="@+id/btoeliminarCliente"
+        app:layout_constraintTop_toBottomOf="@+id/btoVenta" />
+
+    <Button
+        android:id="@+id/btoeliminarCliente"
+        android:layout_width="149dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="Eliminar"
+        android:text="Eliminar Cliente"
+        app:layout_constraintBottom_toTopOf="@+id/btoPantallaBuscarVenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btoClientes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
